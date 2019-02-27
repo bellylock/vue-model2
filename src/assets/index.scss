@@ -1,0 +1,40 @@
+// Sass 支持标准的 CSS 多行注释 /* */，以及单行注释 //，前者会 被完整输出到编译后的 CSS 文件中，而后者则不会，例如：
+
+//编译前
+/* 这些内容会被编译出来 */
+// 这些不会被编译出来
+// 这些真的编译不出来
+// 没骗你
+
+//编译后
+/* 这些内容会被编译出来 */
+
+
+
+$color:#f1f1f1;
+.hello{
+    background-color: desaturate($color,5%);
+    padding: 10px;
+    .name{
+        font-size: 15px;
+        color: hsl(0,20%,10%);
+    }
+    &_box{
+        h2{
+            font-size: 20px;
+            color: #dc0201;
+        }
+        span{
+            color: #666;
+            font:{
+                family: fantasy;
+                size: 15px;
+                weight: bold;
+            }
+        }
+        p{
+            font-size: 14px;
+            color: #333;
+        }
+    }
+}
